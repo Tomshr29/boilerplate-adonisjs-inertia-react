@@ -32,6 +32,7 @@
     "#config/*": "./config/*.js"
   },
   "devDependencies": {
+    "-": "^0.0.1",
     "@adonisjs/assembler": "^7.8.2",
     "@adonisjs/eslint-config": "^2.0.0-beta.7",
     "@adonisjs/prettier-config": "^1.4.0",
@@ -40,14 +41,19 @@
     "@japa/plugin-adonisjs": "^3.0.1",
     "@japa/runner": "^3.1.4",
     "@swc/core": "1.7.26",
+    "@tailwindcss/forms": "^0.5.9",
     "@types/node": "^22.7.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.2",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
     "hot-hook": "^0.3.1",
     "pino-pretty": "^11.2.2",
+    "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.13",
     "ts-node-maintained": "^10.9.4",
     "typescript": "^5.6.3",
     "vite": "^5.4.8"
@@ -86,5 +92,10 @@
       "strtok3": "8.0.1"
     }
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": {
+    "extends": "@adonisjs/prettier-config",
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  }
 }
